@@ -38,7 +38,7 @@
 						<h2>Modularité</h2>
 					</section>
 					<section>
-						<blockquote>Conception d’un système formé d’éléments qui peuvent être assemblés puis séparément modifiés, retirés, ou ajoutés sans interférer avec le fonctionnement des autres éléments. </blockquote>
+						<blockquote style="width: 100%;">Conception d’un système formé d’éléments qui peuvent être assemblés puis séparément modifiés, retirés, ou ajoutés sans interférer avec le fonctionnement des autres éléments. </blockquote>
 						<p style="text-align: left; font-size: large;"><i>https://www.amba.fr/definition-architecture-modulaire-ref001103.html</i></p>
 					</section>
 					
@@ -81,7 +81,6 @@
 					<section>
 						<h2>DDD et bounded contexts</h2>
 						<img data-src="images/bounded_contexts.png" style="float: left; width: 500px;" />
-						<p>Isolation des domaines métiers : </p>
 						<p style="text-align: left;">&nbsp;&nbsp;- Objets</p>
 						<p style="text-align: left;">&nbsp;&nbsp;- Comportements</p>
 						<p style="text-align: left;">&nbsp;&nbsp;- Interactions</p>
@@ -104,10 +103,15 @@
 					</section>
 					<section>
 						<h2 style="text-transform: none;">API HTTP : REST à la maison ?</h2>
-						<p style="text-align: left">- OK pour exposer des infos à l'extérieur</p>
-						<p style="text-align: left">- Dans la communication <u>interne</u> entre modules : introduit un couplage fort entre les composants &#x2639;</p>
+						<ul>
+							<li class="fragment">Pour exposer à l'<u>extérieur</u> : OK</li>
+							<li class="fragment">Communication <u>interne</u> : couplage fort entre les composants &#x2639;</li>
+						</ul>
 						<br/>
-						<p><strong>&rarr;</strong>&nbsp;Privilégier une approche <u>événementielle</u> !</p>
+					</section>
+					<section>
+						<p><strong>&rarr;</strong>&nbsp;Privilégier une approche</p>
+						<p style="font-size: larger;"><strong>événementielle</strong></p>
 					</section>
 				</section>
 				
@@ -118,19 +122,20 @@
 					</section>
 					
 					<section>
-						<h2>Principes</h2>
-						<p style="text-align: left;">Les composants / modules : </p>
-						<ul style="padding-left: 20px;">
-							<li>sont indépendants</li>
-							<li>émettent des événements quand ils changent d'état</li>
-							<li>réagissent potentiellement lors des événements émis par les autres.</li>
-						</ul> 
+						<h2>Un événement ?</h2>
+						<p>Fait passé du système.</p>
+						<p class="fragment" style="font-size: larger;">CustomerCreated</p>
 					</section>
 					
 					<section>
-						<h2>Notion d'événement</h2>
-						<p>Un fait immuable, passé, du système. Exemple : <i>CustomerCreated</i></p>
-						<p>Nécessite de repenser complètement les interactions.</p>
+						<h2>Principes</h2>
+						<p style="text-align: left;">Composants</p>
+						<ul style="padding-left: 20px;">
+							<li class="fragment">indépendants</li>
+							<li class="fragment">émettent des événements</li>
+							<li class="fragment">consomment des événements et réagissent</li>
+						</ul>
+						<p class="fragment">Repenser les interactions !</p>
 					</section>
 					
 					<section>
