@@ -29,13 +29,14 @@
 			
 				<section>
 					<h1>Architecture</h1>
-					<h3>Modulaire, orientée événements, qui fait le café.</h3>
+					<h3>Modulaire, orientée événements</h3>
+					<h4>pourquoi et comment ?</h4>
 					<p style="font-style:italic; font-size: x-large; margin-top: 90px; color: #42affa;">Alexandre Vandekerkhove</p>
 				</section>
 			
 				<section>
 					<section data-background="#42affa">
-						<h2>Modularité</h2>
+						<h1>Modularité</h1>
 					</section>
 					<section>
 						<blockquote style="width: 100%;">Conception d’un système formé d’éléments qui peuvent être assemblés puis séparément modifiés, retirés, ou ajoutés sans interférer avec le fonctionnement des autres éléments. </blockquote>
@@ -43,7 +44,7 @@
 					</section>
 					
 					<section>
-						<h2>1- packaging by feature</h2>
+						<h2>Packaging by feature</h2>
 						<p>&rarr; Monolithe modulaire</p>
 						<img style="margin-right: 30px;" data-src="images/package-by-layer.png" />
 						<img style="margin-left: 30px;" data-src="images/package-by-feature.png" />
@@ -51,7 +52,7 @@
 					</section>
 					
 					<section>
-						<h2>2ème étape</h2>
+						<h2>Aller plus loin</h2>
 						<p>Séparation par le réseau</p>
 						<img data-src="images/etape2.png" width="500px" />
 					</section>
@@ -59,9 +60,9 @@
 					<section>
 						<h2>Objectifs recherchés</h2>
 						<ul>
-							<li>Réduire le <strong>couplage</strong></li>
-							<li>Pouvoir changer une petite partie du système indépendamment du reste</li>
-							<li>Maintenir des briques petites et simples</li>
+							<li><strong>couplage faible</strong></li>
+							<li>Modules interchangeables</li>
+							<li>Briques petites et simples</li>
 						</ul>
 					</section>
 					
@@ -75,7 +76,7 @@
 					
 					<section>
 						<h2>Difficulté</h2>
-						<p>Le niveau de granularité doit être guidé par le <u>métier</u> et non la technique.</p>
+						<p>Un module doit correspondre à un domaine <u>métier</u> et non technique.</p>
 					</section>
 					
 					<section>
@@ -91,7 +92,7 @@
 				
 				<section>
 					<section data-background="#42affa">
-						<h2>Communication entre composants</h2>
+						<h1>Communication entre composants</h1>
 					</section>
 					<section>
 						<h2>Synchrone vs asynchrone</h2>
@@ -118,13 +119,13 @@
 				
 				<section>
 					<section data-background="#42affa">
-						<h2>Architecture orientée événements</h2>
+						<h1>Architecture orientée événements</h1>
 					</section>
 					
 					<section>
 						<h2>Un événement ?</h2>
 						<p>Fait passé du système.</p>
-						<p class="fragment" style="font-size: larger;">CustomerCreated</p>
+						<p class="fragment" style="font-size: larger;"><b>CustomerCreated</b></p>
 					</section>
 					
 					<section>
@@ -161,7 +162,7 @@
 				
 				<section>
 					<section data-background="#42affa">
-						<h2>Les solutions</h2>
+						<h1>Les solutions</h1>
 					</section>
 					
 					<section>
@@ -216,9 +217,9 @@
 					<section>
 						<h2>Anti-pattern : la librairie partagée</h2>
 						<ul>
-							<li>Introduction d'un nouveau couplage</li>
-							<li>Perte du polyglottisme</li>
-							<li>Contextes différents = entités différentes
+							<li class="fragment">Introduction d'un nouveau couplage</li>
+							<li class="fragment">Perte du polyglottisme</li>
+							<li class="fragment">Contextes différents = entités différentes
 								<ul>
 									<li class="fragment" style="font-style: italic; font-size: xx-large;">Product</li>
 									<li class="fragment" style="font-style: italic; font-size: xx-large;">CartItem</li>
@@ -232,7 +233,7 @@
 				</section>
 				
 				<section>
-					<h2>MERCI</h2>
+					<h1>MERCI</h1>
 				</section>
 			
 			</div>
@@ -253,6 +254,15 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+		
+			// change bindings
+			Reveal.configure({
+  				keyboard: {
+    				37: 'prev', // previous slide when pressing left left
+    				39: 'next' // next slide when pressing right
+  				}
+			});
+			
 		</script>
 	</body>
 </html>
