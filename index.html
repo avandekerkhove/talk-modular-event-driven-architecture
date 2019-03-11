@@ -7,7 +7,7 @@
 		<title>Architecture modulaire orientée événements</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 		<link rel="stylesheet" href="css/archi-modulaire.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -31,7 +31,12 @@
 					<h1>Architecture</h1>
 					<h3>Modulaire, orientée événements</h3>
 					<h4>pourquoi et comment ?</h4>
-					<p style="font-style:italic; font-size: x-large; margin-top: 90px; color: #42affa;">Alexandre Vandekerkhove</p>
+					<p style="font-style: italic; font-size: x-large; margin-top: 90px; color: #42affa;"><strong>Alexandre Vandekerkhove</strong></p>
+					<br /><br />
+					<p style="font-size: x-small; text-align: right;">
+					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black</a>
+					&nbsp;/&nbsp;
+					<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a></p>
 				</section>
 			
 				<section>
@@ -85,6 +90,11 @@
 						<p style="text-align: left;">&nbsp;&nbsp;- Objets</p>
 						<p style="text-align: left;">&nbsp;&nbsp;- Comportements</p>
 						<p style="text-align: left;">&nbsp;&nbsp;- Interactions</p>
+					</section>
+					
+					<section>
+						<h2>Event storming</h2>
+						<img data-src="images/event_storming.jpg" style="width: 650px;" />
 					</section>
 					
 				</section>
@@ -230,6 +240,15 @@
 						<p class="fragment"><strong>&rarr;</strong>&nbsp;Ne pas avoir peur de la duplication</p>
 					</section>
 					
+				</section>
+				
+				<section>
+					<h2>Conclusion</h2>
+					<ul>
+						<li>Comprendre le métier</li>
+						<li>Event-driven = happy developers and ops</li>
+						<li>Aller  plus loin : CQRS / Event-sourcing</li>
+					</ul>
 				</section>
 				
 				<section>
